@@ -22,17 +22,17 @@ const HomeLayour = () => {
             </header>
             <main className='grid grid-cols-12'>
                 {/* Left Nav */}
-                <aside className='col-span-3 border'>
+                <aside className='col-span-3 '>
                     <LeftAside></LeftAside>
                 </aside>
 
                 {/* Main, changable section */}
-                <section className='col-span-6 border'>
+                <section className='col-span-6 '>
                     <Outlet></Outlet>
                 </section>
 
                 {/* Right Nav */}
-                <aside className='col-span-3 border'>
+                <aside className='col-span-3 '>
                     <RightAside></RightAside>
                 </aside>
             </main>
