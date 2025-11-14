@@ -3,35 +3,38 @@ import { Outlet } from 'react-router';
 import Header from '../components/Header';
 import LatestNews from '../components/LatestNews';
 import Navbar from '../components/Navbar';
+import LeftAside from '../components/hhomelayout/LeftAside';
+import RightAside from '../components/hhomelayout/RightAside';
 
 const HomeLayour = () => {
     return (
-        <div className='poppins'>
+        <div className='poppins w-[90%] lg:w-[80%] mx-auto'>
             <header>
-
-            </header>
-            <main>
-                {/* Left Nav */}
                 <section>
                     <Header></Header>
-                    <section className='bg-base-200 w-[90%] lg:w-[70%] mx-auto p-2.5 my-4'>
+                    <section className='bg-base-200 mx-auto p-2.5 my-4'>
                         <LatestNews></LatestNews>
                     </section>
-                    <div className='w-[80%] mx-auto'>
+                    <div>
                         <Navbar></Navbar>
                     </div>
-                    
                 </section>
+            </header>
+            <main className='grid grid-cols-12'>
+                {/* Left Nav */}
+                <aside className='col-span-3 border'>
+                    <LeftAside></LeftAside>
+                </aside>
 
                 {/* Main, changable section */}
-                <section>
+                <section className='col-span-6 border'>
                     <Outlet></Outlet>
                 </section>
 
                 {/* Right Nav */}
-                <section>
-                    
-                </section>
+                <aside className='col-span-3 border'>
+                    <RightAside></RightAside>
+                </aside>
             </main>
         </div>
     );
