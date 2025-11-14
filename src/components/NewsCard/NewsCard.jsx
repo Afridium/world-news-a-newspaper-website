@@ -20,7 +20,7 @@ const NewsCard = ({ news }) => {
     <div className="bg-base-200 shadow p-5">
       
       {/* Header */}
-      <div className="flex items-center justify-between mb-4 bg-base-200 p-2">
+      <div className="flex items-center justify-between mb-4 bg-base-200 ">
         <div className="flex items-center gap-3">
           <img
             src={author.img}
