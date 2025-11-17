@@ -9,7 +9,7 @@ const SocialLogin = () => {
             const user = result.user;
             setUser(user);
         }).catch((error) => {
-            console.log(error);
+            alert(error);
         })
     }
     return (
