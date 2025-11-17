@@ -2,9 +2,12 @@ import React from "react";
 import { FaEye, FaShareAlt } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { CiBookmark } from "react-icons/ci";
+import { AuthContext } from "../../AuthProvider/AuthContext";
+import { Link } from 'react-router'
 const NewsCard = ({ news }) => {
 
   const {
+    id,
     title,
     rating,
     total_view,
@@ -13,6 +16,7 @@ const NewsCard = ({ news }) => {
     details,
   } = news;
 
+  // const {user} = use(AuthContext);
   // Format date
   const formattedDate = new Date(news.author.published_date).toLocaleDateString();
 
@@ -57,7 +61,8 @@ const NewsCard = ({ news }) => {
         {details.slice(0, 200)}...
       </p>
 
-      <button className="text-[#FF8C47] font-semibold mb-4 hover:underline">Read More</button>
+      <Link to={`/newsdetail/${id}`} className="text-[#FF8C47] font-semibold mb-4 hover:underline">Read more</Link>
+      
 
       {/* Footer */}
       <div className="flex items-center justify-between border-t pt-4">

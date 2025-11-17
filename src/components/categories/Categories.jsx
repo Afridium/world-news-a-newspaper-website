@@ -8,7 +8,7 @@ const Categories = () => {
             <h2 className='font-bold mb-5'>All Categories ({allcategories.length})</h2>
             <div className='grid grid-cols-1'>
                 {
-                    allcategories.map(category => <NavLink to={`/catnews/${category.id}`} className={"btn bg-base-100 border-0 hover:bg-base-200 justify-start text-left text-accent"} key={category.id}>{category.name}</NavLink>)
+                    allcategories.map(category => <NavLink to={`/catnews/${category.id}`} className={"btn bg-base-100 border-0 hover:bg-base-200 justify-start text-left text-accent"}  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} key={category.id}>{category.name}</NavLink>)
                 }
             </div>
         </div>
